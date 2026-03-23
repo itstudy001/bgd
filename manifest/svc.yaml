@@ -11,6 +11,8 @@ spec:
   - port: 8080
     protocol: TCP
     targetPort: 8080
+    nodePort: 31080
   selector:
     app: bgd
+  type:NodePort
 ---
