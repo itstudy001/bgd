@@ -12,7 +12,6 @@ patchesJson6902:
       version: v1
       kind: Deployment
       name: bgd
-    # namespace는 상단에서 전역으로 설정했으므로 target 내부에서는 생략 가능합니다.
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/0/value
