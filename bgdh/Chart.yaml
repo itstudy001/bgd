@@ -1,6 +1,6 @@
 apiVersion: v2
 name: bgdh
-description: Blue Green Deployment with Helm
+description: Deployment with Helm
 
 type: application
 version: 0.1.0

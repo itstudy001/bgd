@@ -12,6 +12,5 @@ spec:
       protocol: TCP
       name: http
       nodePort: 31080
-  type: NodePort
   selector:
     {{- include "bgdh.selectorLabels" . | nindent 4 }}
