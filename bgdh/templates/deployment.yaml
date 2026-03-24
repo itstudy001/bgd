@@ -35,6 +35,9 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
+          env:
+          - name: COLOR
+            value: "blue"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
