@@ -1,17 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: bgdk
+
 resources:
-- ../base
-- bgdk-ns.yaml
+  - ../base
+  - bgdk-ns.yaml
+
 patchesJson6902:
   - target:
-      version: v1
       group: apps
+      version: v1
       kind: Deployment
       name: bgd
-      namespace: bgdk
-    patch: |- 
+    # namespace는 상단에서 전역으로 설정했으므로 target 내부에서는 생략 가능합니다.
+    patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/env/0/value
         value: yellow
