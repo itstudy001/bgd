@@ -10,7 +10,7 @@ patchesJson6902:
     version: v1
     kind: Deployment
     name: bgd
-  patch: |-
+  patch: |
     - op: replace
       path: /sprc/template/spec/containers/0/env/0/value
       value: yellow
