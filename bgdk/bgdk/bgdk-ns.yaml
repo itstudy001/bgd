@@ -1,4 +1,4 @@
-namespace: bgdk
-resources:
-- svc.yaml
-- deployment.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: bgdk
