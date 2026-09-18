@@ -13,4 +13,4 @@ spec:
     nodePort: 31080
   selector:
     app: bgd
-  type: nodePort
+  type: NodePort
